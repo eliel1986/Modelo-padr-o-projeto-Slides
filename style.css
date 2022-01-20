@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* ocupa toda parte vertical da tela disponível */
+	background-color: #CCC;
+}
+
+.header {
+	height: 50px;
+	background-color: #FF0000;
+}
+
+.slider {
+	flex: 1; /* ocupa todo restante que sobrou da div */
+	overflow: hidden; /* corta o que passar do tamanho da div */
+}
+
+.slider--width {
+	height: 100%; /* ocupa 100% do espaço disponível */
+	display: flex; /* um item ao lado do outro */
+	transition: all ease 0.7s; /* transição de uma div (slider) para outra */
+}
+
+.slider--item {
+	width: 100vw; /* ocupa toda parte horizontal da tela disponível */
+	height: inherit; /* herda altura da div pai */ 
+	background-position: center; /* imagem centralizada */
+	background-size: cover; /* imagem se ajusta de acordo tamanho do monitor */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFF;
+	text-shadow: 0px 4px 4px #333;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.slider--controls {
+	position: absolute; /* para ficar por cima da div pai */
+	z-index: 99; /* ficar acima da foto */
+	width: 100%; /* ocupa toda parte horizontal da tela disponível */
+	display: flex; /* um item ao lado do outro */
+	justify-content: space-between; /* um item em cada lado da tela */
+	align-items: center; /* fica no centro da div pai */
+}
+
+.slider--control {
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 4px 4px #333;
+	cursor: pointer;
+}
+
